@@ -1,8 +1,8 @@
 {
   "name": "be-chats",
   "version": "1.0.0",
-  "description": "",
-  "main": "./server.js",
+  "description": "Linxchat",
+  "main": "server.js",
   "engines": {
     "node": "18.x"
   },
