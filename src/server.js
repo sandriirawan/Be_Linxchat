@@ -44,6 +44,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ 'extended': false }));
 
 
+app.get('/', (req, res) => {
+    const data = {
+      success: true,
+      message: 'backend is running well'
+    }
+    return res.json(data)
+  })
 
 app.options('*', (req, res) => {
     return res.json({ status: 'OK' });
