@@ -7,13 +7,13 @@ const useragent = require('express-useragent');
 const dotenv = require('dotenv');
 const http = require('http');
 
-const AUTH_ROUTER = require('./routers/auth');
-const API_ROUTER = require('./routers/api');
+const AUTH_ROUTER = require('./src/routers/auth');
+const API_ROUTER = require('./src/routers/api');
 
 dotenv.config();
 const app = express();
 const server = require('http').createServer(app)
-const socketMiddleware = require('./middleware/socket');
+const socketMiddleware = require('./src/middleware/socket');
 const io = require('socket.io')(server, {
     cors: {
         origin: '*'
@@ -51,6 +51,7 @@ app.get('/', (req, res) => {
     }
     return res.json(data)
   })
+  
 
 app.options('*', (req, res) => {
     return res.json({ status: 'OK' });
