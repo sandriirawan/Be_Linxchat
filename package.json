@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node ./server.js",
     "server": "node index.js",
+    "dev": "nodemon server.js",
     "test": "jest",
     "test:watch": "jest --watch"
   },

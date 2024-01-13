@@ -46,12 +46,12 @@ app.use(bodyParser.urlencoded({ 'extended': false }));
 
 app.get('/', (req, res) => {
     const data = {
-      success: true,
-      message: 'backend is running well'
+        success: true,
+        message: 'backend is running well'
     }
     return res.json(data)
-  })
-  
+})
+
 
 app.options('*', (req, res) => {
     return res.json({ status: 'OK' });
@@ -71,6 +71,7 @@ app.use((req, res, next) => {
 const port = process.env.PORT || 5000;
 
 server.listen(port, () => {
+    ``
     console.log(`http://localhost:${port}`);
 });
 
