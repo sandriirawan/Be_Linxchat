@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "nodemon ./src/server.js",
+    "server": "node index.js",
     "test": "jest",
     "test:watch": "jest --watch"
   },
